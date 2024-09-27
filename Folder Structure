@@ -1,26 +1,25 @@
-Projeto-Nome/
+/fraud-prevention-analysis
 │
-├── src/
-│   ├── main.py                # Arquivo principal do projeto
-│   ├── config.py              # Arquivo de configuração (se necessário)
-│   └── utils.py               # Arquivo para funções auxiliares
+├── /data                    # Diretório para armazenar dados
+│   ├── raw                  # Dados brutos
+│   ├── processed            # Dados processados
 │
-├── data/
-│   ├── raw/                   # Dados brutos (não processados)
-│   ├── processed/             # Dados processados
-│   └── datasets/              # Conjunto de dados usados
+├── /notebooks               # Jupyter Notebooks para análise
+│   ├── exploratory_analysis.ipynb
+│   ├── model_evaluation.ipynb
 │
-├── notebooks/
-│   └── exploracao.ipynb        # Análises exploratórias e documentação via Jupyter Notebooks
+├── /src                    # Código fonte do projeto
+│   ├── __init__.py
+│   ├── data_preprocessing.py # Scripts para pré-processamento de dados
+│   ├── feature_engineering.py # Scripts para engenharia de recursos
+│   ├── model_training.py     # Scripts para treinamento de modelos
+│   ├── model_prediction.py    # Scripts para fazer previsões
+│   ├── utils.py              # Funções utilitárias
 │
-├── tests/
-│   ├── test_main.py            # Testes para o código
-│   └── test_utils.py           # Testes das funções auxiliares
+├── /reports                 # Relatórios gerados
+│   ├── analysis_report.pdf
+│   ├── fraud_detection_report.pdf
 │
-├── docs/
-│   └── documentacao.md         # Documentação do projeto
-│
-├── .gitignore                  # Arquivos e pastas a serem ignorados pelo Git
-├── LICENSE                     # Licença de uso do projeto
-├── README.md                   # Descrição do projeto, instalação e uso
-└── requirements.txt            # Arquivo de dependências
+├── .gitignore               # Arquivos e pastas ignorados pelo Git
+├── LICENSE                  # Licença do projeto
+└── README.md                # Descrição do projeto
