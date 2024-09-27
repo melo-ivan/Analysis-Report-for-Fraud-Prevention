@@ -1,0 +1,49 @@
+import gdown
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from mpl_toolkits.mplot3d import Axes3D
+
+# Baixar o arquivo do Google Drive
+url = 'https://drive.google.com/uc?id=19pvynfhP_e93GyddZbNam6Ju7gXStz8G'
+output = 'creditcard.csv'
+gdown.download(url, output, quiet=False)
+
+# Carregar o arquivo CSV para um DataFrame
+df = pd.read_csv(output)
+
+# Visualizar as primeiras linhas do DataFrame
+print("Primeiras linhas do DataFrame:")
+print(df.head())
+
+# Análise exploratória básica
+print("\nInformações sobre o DataFrame:")
+print(df.info())
+
+# Estatísticas descritivas das variáveis numéricas
+print("\nEstatísticas descritivas das variáveis numéricas:")
+print(df.describe())
+
+# Histograma das variáveis numéricas
+print("\nHistograma das variáveis numéricas:")
+df.hist(figsize=(12, 10))
+plt.tight_layout()
+plt.show()
+
+# Gráfico 3D para algumas variáveis
+print("\nGráfico 3D para algumas variáveis:")
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+x = df['V1']
+y = df['V2']
+z = df['V3']
+colors = df['Class']  # Cor por classe
+
+ax.scatter(x, y, z, c=colors, marker='o', cmap='coolwarm', s=20, alpha=0.6)
+ax.set_xlabel('V1')
+ax.set_ylabel('V2')
+ax.set_zlabel('V3')
+ax.set_title('Gráfico 3D das Variáveis V1, V2 e V3')
+plt.show()
+
