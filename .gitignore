@@ -1,0 +1,17 @@
+# Ignorar arquivos de ambiente virtual
+env/
+venv/
+
+# Ignorar dados brutos
+/data/raw/
+
+# Ignorar arquivos de configuração do sistema
+*.pyc
+__pycache__/
+*.ipynb_checkpoints
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar relatórios gerados
+/reports/*.pdf
