@@ -1,0 +1,26 @@
+Projeto-Nome/
+│
+├── src/
+│   ├── main.py                # Arquivo principal do projeto
+│   ├── config.py              # Arquivo de configuração (se necessário)
+│   └── utils.py               # Arquivo para funções auxiliares
+│
+├── data/
+│   ├── raw/                   # Dados brutos (não processados)
+│   ├── processed/             # Dados processados
+│   └── datasets/              # Conjunto de dados usados
+│
+├── notebooks/
+│   └── exploracao.ipynb        # Análises exploratórias e documentação via Jupyter Notebooks
+│
+├── tests/
+│   ├── test_main.py            # Testes para o código
+│   └── test_utils.py           # Testes das funções auxiliares
+│
+├── docs/
+│   └── documentacao.md         # Documentação do projeto
+│
+├── .gitignore                  # Arquivos e pastas a serem ignorados pelo Git
+├── LICENSE                     # Licença de uso do projeto
+├── README.md                   # Descrição do projeto, instalação e uso
+└── requirements.txt            # Arquivo de dependências
